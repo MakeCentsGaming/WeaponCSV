@@ -1,0 +1,17 @@
+c:\users\makecents\documents\visual studio 2015\Projects\WeaponsCSV\WeaponsCSV\bin\Debug\WeaponsCSV.exe.config
+c:\users\makecents\documents\visual studio 2015\Projects\WeaponsCSV\WeaponsCSV\bin\Debug\WeaponsCSV.exe
+c:\users\makecents\documents\visual studio 2015\Projects\WeaponsCSV\WeaponsCSV\bin\Debug\WeaponsCSV.pdb
+c:\users\makecents\documents\visual studio 2015\Projects\WeaponsCSV\WeaponsCSV\obj\Debug\WeaponsCSV.csprojResolveAssemblyReference.cache
+c:\users\makecents\documents\visual studio 2015\Projects\WeaponsCSV\WeaponsCSV\obj\Debug\MainWindow.g.cs
+c:\users\makecents\documents\visual studio 2015\Projects\WeaponsCSV\WeaponsCSV\obj\Debug\App.g.cs
+c:\users\makecents\documents\visual studio 2015\Projects\WeaponsCSV\WeaponsCSV\obj\Debug\WeaponsCSV_MarkupCompile.cache
+c:\users\makecents\documents\visual studio 2015\Projects\WeaponsCSV\WeaponsCSV\obj\Debug\WeaponsCSV_MarkupCompile.lref
+c:\users\makecents\documents\visual studio 2015\Projects\WeaponsCSV\WeaponsCSV\obj\Debug\MainWindow.baml
+c:\users\makecents\documents\visual studio 2015\Projects\WeaponsCSV\WeaponsCSV\obj\Debug\WeaponsCSV.g.resources
+c:\users\makecents\documents\visual studio 2015\Projects\WeaponsCSV\WeaponsCSV\obj\Debug\WeaponsCSV.Properties.Resources.resources
+c:\users\makecents\documents\visual studio 2015\Projects\WeaponsCSV\WeaponsCSV\obj\Debug\WeaponsCSV.csproj.GenerateResource.Cache
+c:\users\makecents\documents\visual studio 2015\Projects\WeaponsCSV\WeaponsCSV\obj\Debug\WeaponsCSV.exe
+c:\users\makecents\documents\visual studio 2015\Projects\WeaponsCSV\WeaponsCSV\obj\Debug\WeaponsCSV.pdb
+C:\Users\MakeCents\Source\Repos\WeaponCSV\WeaponsCSV\bin\Debug\WeaponsCSV.exe.config
+C:\Users\MakeCents\Source\Repos\WeaponCSV\WeaponsCSV\obj\Debug\WeaponsCSV.exe
+C:\Users\MakeCents\Source\Repos\WeaponCSV\WeaponsCSV\obj\Debug\WeaponsCSV.pdb
