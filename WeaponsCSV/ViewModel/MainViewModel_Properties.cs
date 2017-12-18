@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MakeCents;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -59,6 +60,21 @@ namespace WeaponsCSV
          {
             _FileFolderName = value;
             OnPropertyChanged("FileFolderName");
+
+         }
+      }
+
+      public List<string> _WeaponNames;
+      /// <summary>
+      /// 
+      /// </summary>
+      public List<string> WeaponNames
+      {
+         get { return _WeaponNames; }
+         set
+         {
+            _WeaponNames = value;
+            OnPropertyChanged("WeaponNames");
 
          }
       }
@@ -421,7 +437,35 @@ namespace WeaponsCSV
          }
       }
 
+      public bool _NewLine;
+      /// <summary>
+      /// 
+      /// </summary>
+      public bool NewLine
+      {
+         get { return _NewLine; }
+         set
+         {
+            _NewLine = value;
+            OnPropertyChanged("NewLine");
 
+         }
+      }
+
+      public List<clsWeaponCSV> _AllLines;
+      /// <summary>
+      /// 
+      /// </summary>
+      public List<clsWeaponCSV> AllLines
+      {
+         get { return _AllLines; }
+         set
+         {
+            _AllLines = value;
+            OnPropertyChanged("AllLines");
+
+         }
+      }
 
    }//end Class
 }

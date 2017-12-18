@@ -17,6 +17,15 @@ namespace WeaponsCSV
       {
          get { return clearAll = new DelegateCommand(clearall); }
       }
+
+      private ICommand add;
+      /// <summary>
+      /// 
+      /// </summary>
+      public ICommand Add
+      {
+         get { return add = new DelegateCommand(aDD); }
+      }
       /* Exmaple
       private ICommand pClose;
       /// <summary>

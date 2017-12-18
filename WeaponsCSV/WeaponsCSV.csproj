@@ -55,6 +55,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Classes\clsDragNDrop.cs" />
+    <Compile Include="Classes\clsWeaponCSV.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel_Commands.cs" />
     <Compile Include="ViewModel\MainViewModel_Functions.cs" />
