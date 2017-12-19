@@ -96,6 +96,58 @@ namespace MakeCents
          this.force_attachments = force_attachments;
       }
 
+      internal static string GetLine(clsWeaponCSV tb)
+      {
+         StringBuilder sb = new StringBuilder();
+         sb.Append(tb.weapon_name);
+         sb.Append(",");
+         sb.Append(tb.upgrade_name);
+         sb.Append(",");
+         sb.Append(tb.hint);
+         sb.Append(",");
+         sb.Append(tb.cost);
+         sb.Append(",");
+         sb.Append(tb.weaponVO);
+         sb.Append(",");
+         sb.Append(tb.weaponVOresp);
+         sb.Append(",");
+         sb.Append(tb.ammo_cost);
+         sb.Append(",");
+         sb.Append(tb.create_vox);
+         sb.Append(",");
+         sb.Append(tb.obsolete_false);
+         sb.Append(",");
+         sb.Append(tb.in_box);
+         sb.Append(",");
+         sb.Append(tb.upgrade_in_box);
+         sb.Append(",");
+         sb.Append(tb.is_limited);
+         sb.Append(",");
+         sb.Append(tb.limit);
+         sb.Append(",");
+         sb.Append(tb.upgrade_limit);
+         sb.Append(",");
+         sb.Append(tb.obsolete2_false);
+         sb.Append(",");
+         sb.Append(tb.wallbuy_autospawn);
+         sb.Append(",");
+         sb.Append(tb.classs);
+         sb.Append(",");
+         sb.Append(tb.is_aat_exempt);
+         sb.Append(",");
+         sb.Append(tb.is_wonder_weapon);
+         sb.Append(",");
+         sb.Append(tb.force_attachments);
+         return sb.ToString();
+
+      }
+
+      public static string GetHeaders()
+      {
+         string result = String.Join(",",new string[]{"weapon_name", "upgrade_name", "hint", "cost", "weaponVO", "weaponVOresp", "ammo_cost", "create_vox", "obsolete_false", "in_box", "upgrade_in_box", "is_limited", "limit", "upgrade_limit", "obsolete2_false", "wallbuy_autospawn", "classs", "is_aat_exempt", "is_wonder_weapon", "force_attachments"});
+         return result;
+      }
+
       internal void Update(Dictionary<string, string> kvps)
       {
 
@@ -181,7 +233,7 @@ namespace MakeCents
          }
 }
 
-      internal static List<string> UpdateWeaponNames(ObservableCollection<clsWeaponCSV> allLines)
+      public static List<string> UpdateWeaponNames(ObservableCollection<clsWeaponCSV> allLines)
       {
          //WeaponNames = new List<string>();
          List<string> test = new List<string>();

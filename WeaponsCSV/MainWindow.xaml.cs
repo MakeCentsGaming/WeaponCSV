@@ -2,8 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
@@ -27,6 +29,10 @@ namespace WeaponsCSV
       {
          InitializeComponent();
          InitControls();
+         Version v = Assembly.GetExecutingAssembly().GetName().Version;
+         MVM.About = string.Format(CultureInfo.InvariantCulture, @"Version {0}.{1}.{2} (r{3})", v.Major, v.Minor, v.Build, v.Revision);
+
+
       }
 
       private void InitControls()

@@ -24,8 +24,19 @@ namespace WeaponsCSV
       /// </summary>
       public ICommand Delete
       {
-         get { return delete = new DelegateCommand(deLete); }
+         get { return delete = new DelegateCommand(dElete); }
       }
+
+      private ICommand comment;
+      /// <summary>
+      /// 
+      /// </summary>
+      public ICommand Comment
+      {
+         get { return comment = new DelegateCommand(cOmment); }
+      }
+
+
 
       private ICommand save;
       /// <summary>
@@ -35,6 +46,7 @@ namespace WeaponsCSV
       {
          get { return save = new DelegateCommand(sAve); }
       }
+
       
 
       private ICommand add;

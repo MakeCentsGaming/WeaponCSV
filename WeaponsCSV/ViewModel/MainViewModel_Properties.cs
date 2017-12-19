@@ -140,6 +140,20 @@ namespace WeaponsCSV
 
          }
       }
+      public string _About;
+      /// <summary>
+      /// 
+      /// </summary>
+      public string About
+      {
+         get { return _About; }
+         set
+         {
+            _About = value;
+            OnPropertyChanged("About");
+
+         }
+      }
 
       public string _weapon_name;
       /// <summary>

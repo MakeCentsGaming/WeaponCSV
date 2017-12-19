@@ -31,3 +31,5 @@ C:\Users\davidg\Source\Repos\WeaponCSV\WeaponsCSV\obj\Debug\WeaponsCSV.csproj.Ge
 C:\Users\davidg\Source\Repos\WeaponCSV\WeaponsCSV\obj\Debug\WeaponsCSV.csproj.CoreCompileInputs.cache
 C:\Users\davidg\Source\Repos\WeaponCSV\WeaponsCSV\obj\Debug\WeaponsCSV.exe
 C:\Users\davidg\Source\Repos\WeaponCSV\WeaponsCSV\obj\Debug\WeaponsCSV.pdb
+C:\Users\davidg\Source\Repos\WeaponCSV\WeaponsCSV\obj\Debug\Simple Styles.baml
+C:\Users\davidg\Source\Repos\WeaponCSV\WeaponsCSV\obj\Debug\App.baml
