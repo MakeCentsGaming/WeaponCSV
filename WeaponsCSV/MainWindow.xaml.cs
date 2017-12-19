@@ -31,7 +31,7 @@ namespace WeaponsCSV
 
       private void InitControls()
       {
-         MVM.AllLines = new List<clsWeaponCSV>();
+         MVM.AllLines = new ObservableCollection<clsWeaponCSV>();
          //form drag and drop
          clsDragNDrop.TextBoxDragNDrop(filefoldername, this);
          //textbox drag and drop
@@ -111,7 +111,7 @@ namespace WeaponsCSV
             db.Add(tb);
             //Console.WriteLine(line);
          }
-         MVM.mspreadsheet = db;
+         //MVM.mspreadsheet = MVM.AllLines;
          MVM.WeaponNames = clsWeaponCSV.UpdateWeaponNames(MVM.AllLines);
          MVM.NewLine = false;
          Mouse.OverrideCursor = Cursors.Arrow;
@@ -122,10 +122,15 @@ namespace WeaponsCSV
          if (MVM.weapon_name=="" || MVM.WeaponNames.Contains(MVM.weapon_name))
          {            
             MVM.NewLine = false;
+            if(MVM.weapon_name=="")
+               MVM.CommentOut = false;
+            else
+               MVM.CommentOut = true;
             return false;
          }
          else
          {
+            MVM.CommentOut = false;
             MVM.NewLine = true;
             return true;
          }
@@ -188,13 +193,16 @@ namespace WeaponsCSV
             MVM.force_attachments = p.force_attachments;
          }
          MVM.clearing = false;
+         
+         
       }
 
       private void UpdateDB(object sender, TextChangedEventArgs e)
       {
          UpdateItem();
-         spreadsheet.ItemsSource = null;
-         spreadsheet.ItemsSource = MVM.mspreadsheet;
+         //spreadsheet.ItemsSource = null;
+         //spreadsheet.ItemsSource = MVM.mspreadsheet;
+         spreadsheet.Items.Refresh();
       }
 
       private void UpdateItem()
@@ -251,6 +259,8 @@ namespace WeaponsCSV
       private void spreadsheet_MouseLeave(object sender, MouseEventArgs e)
       {
          filefoldername.Focus();
+         MVM.WeaponNames = clsWeaponCSV.UpdateWeaponNames(MVM.AllLines);
       }
+
    }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -180,16 +181,21 @@ namespace MakeCents
          }
 }
 
-      internal static List<string> UpdateWeaponNames(List<clsWeaponCSV> allLines)
+      internal static List<string> UpdateWeaponNames(ObservableCollection<clsWeaponCSV> allLines)
       {
          //WeaponNames = new List<string>();
          List<string> test = new List<string>();
          foreach (clsWeaponCSV c in allLines)
          {
             //Console.WriteLine(c.weapon_name);
-            test.Add(c.weapon_name);
+            if(!c.weapon_name.StartsWith("//"))
+            {
+               test.Add(c.weapon_name);
+            }
+            
 
          }
+         test.Sort();
          return test;
       }
    }

@@ -50,21 +50,7 @@ namespace WeaponsCSV
          }
       }
       */
-      public ObservableCollection<clsWeaponCSV> _mspreadsheet;
-
-      /// <summary>
-      /// 
-      /// </summary>
-      public ObservableCollection<clsWeaponCSV> mspreadsheet
-      {
-         get { return _mspreadsheet; }
-         set
-         {
-            _mspreadsheet = value;
-            OnPropertyChanged("mspreadsheet");
-
-         }
-      }
+      
       public string _FileFolderName;
       /// <summary>
       /// 
@@ -468,11 +454,27 @@ namespace WeaponsCSV
          }
       }
 
-      public List<clsWeaponCSV> _AllLines;
+      public bool _CommentOut;
       /// <summary>
       /// 
       /// </summary>
-      public List<clsWeaponCSV> AllLines
+      public bool CommentOut
+      {
+         get { return _CommentOut; }
+         set
+         {
+            _CommentOut = value;
+            OnPropertyChanged("CommentOut");
+
+         }
+      }
+
+
+      public ObservableCollection<clsWeaponCSV> _AllLines;
+      /// <summary>
+      /// 
+      /// </summary>
+      public ObservableCollection<clsWeaponCSV> AllLines
       {
          get { return _AllLines; }
          set

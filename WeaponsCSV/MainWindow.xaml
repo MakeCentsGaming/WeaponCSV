@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WeaponsCSV"
         mc:Ignorable="d"
-        Title="MainWindow" Height="483.825" Width="478" MinHeight="437.782" MinWidth="525">
+        Title="MainWindow" Height="483.825" Width="478" MinHeight="483.825" MinWidth="525" MaxHeight="483.825">
     <Window.DataContext>
         <local:MainViewModel />
     </Window.DataContext>
@@ -23,20 +23,20 @@
                         <ColumnDefinition Width="141*"/>
                         <ColumnDefinition Width="163*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBox Text ="{Binding upgrade_name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" x:Name="textBox_Copy1" Height="23" Margin="20.735,66.787,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="UpdateDB" Grid.ColumnSpan="3"/>
+                    <TextBox Text ="{Binding upgrade_name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" x:Name="textBox_Copy1" Height="23" Margin="20.735,66.787,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="UpdateDB" Grid.ColumnSpan="3" ToolTip="Upgraded weapon file name"/>
                     <TextBox Text="{Binding hint, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" x:Name="textBox_Copy2" Height="23" Margin="20.735,207.863,4.929,0" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="UpdateDB" Grid.ColumnSpan="2"/>
                     <Label x:Name="label" Content="weapon__name" HorizontalAlignment="Left" Margin="20.866,-0.203,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="25.96" Width="86.42"/>
-                    <ComboBox TextBoxBase.TextChanged="comboBox_TextChanged"  ItemsSource="{Binding WeaponNames, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Text="{Binding weapon_name}" x:Name="weaponname" Margin="20.866,21.681,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="21.96" IsEditable="True"/>
+                    <ComboBox TextBoxBase.TextChanged="comboBox_TextChanged"  ItemsSource="{Binding WeaponNames, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Text="{Binding weapon_name}" x:Name="weaponname" Margin="20.866,21.681,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="21.96" IsEditable="True" ToolTip="Weapon file name"/>
                     <Label x:Name="label_Copy" Content="upgrade__name" HorizontalAlignment="Left" Margin="21.064,43.441,0,0" VerticalAlignment="Top" Width="93.951" Height="25.96" Grid.ColumnSpan="2"/>
                     <Label x:Name="label_Copy1" Content="hint" HorizontalAlignment="Left" Margin="20.478,185.757,0,0" VerticalAlignment="Top" Height="25.96" Width="30.553" Grid.ColumnSpan="2"/>
                     <TextBox Text="{Binding weaponVOresp, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" x:Name="textBox_Copy3" Height="23" Margin="0,254.315,15.424,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="2" TextChanged="UpdateDB" Grid.ColumnSpan="2"/>
                     <Label x:Name="label_Copy2" Content="cost" HorizontalAlignment="Left" Margin="21.427,90.123,0,0" VerticalAlignment="Top" Height="25.96" Width="31.733" Grid.ColumnSpan="2"/>
-                    <ComboBox TextBoxBase.TextChanged="UpdateDB" Text="{Binding cost, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding Cost, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" x:Name="cost" Margin="20.927,114.509,10.812,0" VerticalAlignment="Top" IsEditable="True" ToolTip="Cost of wall buy" Height="21.96" Grid.ColumnSpan="2"/>
+                    <ComboBox TextBoxBase.TextChanged="UpdateDB" Text="{Binding cost, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding Cost, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" x:Name="cost" Margin="20.927,114.509,10.812,0" VerticalAlignment="Top" IsEditable="True" ToolTip="Cost of wall buy" Height="21.96" Grid.ColumnSpan="2" />
                     <Label x:Name="label_Copy3" Content="weaponVO" HorizontalAlignment="Left" Margin="0,186.775,0,0" VerticalAlignment="Top" Grid.Column="2" Width="79.808" Height="25.96" Grid.ColumnSpan="2"/>
                     <Label x:Name="label_Copy4" Content="weaponVOresp" HorizontalAlignment="Left" Margin="0.913,232.209,0,0" VerticalAlignment="Top" Grid.Column="2" Height="25.96" Width="90.733" Grid.ColumnSpan="2"/>
                     <TextBox Text="{Binding create_vox, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" x:Name="textBox_Copy4" Height="23" Margin="0.071,111.993,14.011,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="2" TextChanged="UpdateDB" Grid.ColumnSpan="2"/>
                     <Label x:Name="label_Copy5" Content="ammo__cost" HorizontalAlignment="Left" Margin="21.147,135.229,0,0" VerticalAlignment="Top" Height="25.96" Width="70.523" Grid.ColumnSpan="2"/>
-                    <ComboBox TextBoxBase.TextChanged="UpdateDB" Text="{Binding ammo_cost, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding Cost, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" x:Name="comboBox_Copy1" Margin="21.147,159.615,10.812,0" VerticalAlignment="Top" IsEditable="True" Height="21.96" Grid.ColumnSpan="2"/>
+                    <ComboBox TextBoxBase.TextChanged="UpdateDB" Text="{Binding ammo_cost, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding Cost, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" x:Name="comboBox_Copy1" Margin="21.147,159.615,10.812,0" VerticalAlignment="Top" IsEditable="True" Height="21.96" Grid.ColumnSpan="2" ToolTip="Cost of ammo from wall buy"/>
                     <Label x:Name="label_Copy6" Content="create__vox" HorizontalAlignment="Left" Margin="0.659,88.647,0,0" VerticalAlignment="Top" Grid.Column="2" Height="25.96" Width="65.707" Grid.ColumnSpan="2"/>
                     <Label x:Name="label_Copy7" Content="obsolete__false" HorizontalAlignment="Left" Margin="0.596,135.993,0,0" VerticalAlignment="Top" Grid.Column="4" Height="25.96" Width="84.853"/>
                     <Label x:Name="label_Copy8" Content="in__box" HorizontalAlignment="Left" Margin="5.381,-1.705,0,0" VerticalAlignment="Top" Height="25.96" Width="44.267" Grid.Column="3"/>
@@ -45,7 +45,6 @@
                     <ComboBox TextBoxBase.TextChanged="UpdateDB" Text="{Binding upgrade_in_box, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding TrueFalse, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" x:Name="comboBox_Copy3" Margin="6.651,67.827,21.801,0" VerticalAlignment="Top" Grid.Column="3" Height="21.96" IsEditable="True"/>
                     <Label x:Name="label_Copy10" Content="is__limited" HorizontalAlignment="Left" Margin="0.59,-0.705,0,0" VerticalAlignment="Top" Grid.Column="4" Height="25.96" Width="59.447"/>
                     <ComboBox Text="{Binding is_limited, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding TrueFalse, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" x:Name="islimited" Margin="0.88,21.681,26.363,0" VerticalAlignment="Top" Grid.Column="4" Height="21.96" IsEditable="True"/>
-                    <Button IsEnabled="{Binding NewLine}" Command="{Binding Add}" x:Name="button" Content="Add" Margin="0,333.499,110.789,0" VerticalAlignment="Top" Grid.Column="3" HorizontalAlignment="Right" Width="69" Height="19.96" Grid.ColumnSpan="2"/>
                     <TextBox Text="{Binding limit, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" x:Name="textBox_Copy6" Height="23" Margin="0,66.887,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="OnlyNumeric" Grid.Column="4" HorizontalAlignment="Left" Width="43.037"/>
                     <Label x:Name="label_Copy11" Content="limit" HorizontalAlignment="Left" Margin="0.718,44.541,0,0" VerticalAlignment="Top" Height="25.96" Width="33.123" Grid.Column="4"/>
                     <TextBox TextChanged="OnlyNumeric" Text="{Binding upgrade_limit, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" x:Name="textBox_Copy7" Height="23" Margin="49.226,66.787,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="4" HorizontalAlignment="Left" Width="87.23"/>
@@ -62,17 +61,23 @@
                     <ComboBox TextBoxBase.TextChanged="UpdateDB" Text="{Binding is_wonder_weapon, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding TrueFalse}" x:Name="comboBox_Copy9" Margin="0.88,111.993,26.363,0" VerticalAlignment="Top" Height="21.96" IsEditable="True" Grid.Column="4"/>
                     <TextBox Text="{Binding force_attachments, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" x:Name="textBox_Copy" Height="23" Margin="20.478,301.406,22.908,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="5" TextChanged="UpdateDB"/>
                     <Label x:Name="label_Copy18" Content="force__attachments" HorizontalAlignment="Left" Margin="20.949,278.06,0,0" VerticalAlignment="Top" Height="25.96" Width="107.003" Grid.ColumnSpan="2"/>
-                    <Button Command="{Binding ClearAll}" x:Name="button_Copy" Content="Clear" Margin="2.595,333.499,0,0" VerticalAlignment="Top" Grid.Column="1" HorizontalAlignment="Left" Width="54" Height="19.96"/>
-                    <Button x:Name="button_Copy1" Content="Save" Margin="0,333.499,40.859,0" VerticalAlignment="Top" Grid.Column="4" HorizontalAlignment="Right" Width="54" Height="19.96"/>
                     <ComboBox TextBoxBase.TextChanged="UpdateDB" Text="{Binding obsolete2_false, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding TrueFalse}" x:Name="comboBox_Copy" Margin="0.88,204.009,22.028,0" VerticalAlignment="Top" Grid.Column="4" Height="21.96" IsEditable="True"/>
-                    <Button Command="{Binding ClearAll}" x:Name="button_Copy2" Content="Delete" Margin="72.266,333.499,0,0" VerticalAlignment="Top" Grid.Column="1" HorizontalAlignment="Left" Width="54" Height="19.96"/>
                     <ComboBox TextBoxBase.TextChanged="UpdateDB" Text="{Binding obsolete_false, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding TrueFalse}" x:Name="comboBox_Copy4" Margin="0,159.239,22.908,0" VerticalAlignment="Top" Grid.Column="4" Height="21.96" IsEditable="True"/>
+                    <DockPanel Grid.ColumnSpan="5" HorizontalAlignment="Left" Height="36.654" LastChildFill="False" VerticalAlignment="Top" Width="475.959" Margin="20.478,329.406,0,0" RenderTransformOrigin="0.5,0.5">
+                        <Button Command="{Binding ClearAll}" x:Name="button_Copy" Content="Clear" VerticalAlignment="Top" HorizontalAlignment="Left" Width="54" Height="19.96"/>
+                        <DockPanel Height="36.654" LastChildFill="False" VerticalAlignment="Top" Width="12"/>
+                        <Button IsEnabled="{Binding CommentOut}" Command="{Binding Delete}" x:Name="button_Copy2" Content="Comment Out" VerticalAlignment="Top" HorizontalAlignment="Left" Width="87.239" Height="19.96"/>
+                        <DockPanel Height="36.654" LastChildFill="False" VerticalAlignment="Top" Width="12"/>
+                        <Button IsEnabled="{Binding NewLine}" Command="{Binding Add}" x:Name="button" Content="Add" VerticalAlignment="Top" HorizontalAlignment="Left" Width="69" Height="19.96"/>
+                        <DockPanel Height="36.654" LastChildFill="False" VerticalAlignment="Top" Width="12"/>
+                        <Button Command="{Binding Save}" x:Name="button_Copy1" Content="Save" VerticalAlignment="Top" HorizontalAlignment="Left" Width="54" Height="19.96"/>
+                    </DockPanel>
 
                 </Grid>
             </TabItem>
             <TabItem Header="Spreadsheet">
                 <Grid Background="#FFE5E5E5">
-                    <DataGrid CanUserDeleteRows="False" ItemsSource="{Binding mspreadsheet, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalScrollBarVisibility="Auto" x:Name="spreadsheet" Margin="10" CellEditEnding="spreadsheet_CellEditEnding" RowEditEnding="spreadsheet_RowEditEnding" MouseLeave="spreadsheet_MouseLeave"/>
+                    <DataGrid CanUserAddRows="False" CanUserDeleteRows="False" ItemsSource="{Binding AllLines, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalScrollBarVisibility="Auto" x:Name="spreadsheet" Margin="10" CellEditEnding="spreadsheet_CellEditEnding" RowEditEnding="spreadsheet_RowEditEnding" MouseLeave="spreadsheet_MouseLeave"/>
                 </Grid>
             </TabItem>
         </TabControl>

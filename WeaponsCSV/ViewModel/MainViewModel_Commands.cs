@@ -18,6 +18,25 @@ namespace WeaponsCSV
          get { return clearAll = new DelegateCommand(clearall); }
       }
 
+      private ICommand delete;
+      /// <summary>
+      /// 
+      /// </summary>
+      public ICommand Delete
+      {
+         get { return delete = new DelegateCommand(deLete); }
+      }
+
+      private ICommand save;
+      /// <summary>
+      /// 
+      /// </summary>
+      public ICommand Save
+      {
+         get { return save = new DelegateCommand(sAve); }
+      }
+      
+
       private ICommand add;
       /// <summary>
       /// 
