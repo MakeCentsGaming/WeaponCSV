@@ -194,7 +194,7 @@ namespace WeaponsCSV
       {
          UpdateItem();
          spreadsheet.ItemsSource = null;
-         spreadsheet.ItemsSource = db;
+         spreadsheet.ItemsSource = MVM.mspreadsheet;
       }
 
       private void UpdateItem()

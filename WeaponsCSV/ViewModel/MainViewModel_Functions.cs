@@ -64,6 +64,7 @@ namespace WeaponsCSV
             force_attachments);
 
          AllLines.Add(tb);
+         mspreadsheet.Add(tb);
          //WeaponNames.Add(tb.weapon_name);
          WeaponNames = clsWeaponCSV.UpdateWeaponNames(AllLines);
          NewLine = false;
