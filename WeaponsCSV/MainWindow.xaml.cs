@@ -1,15 +1,18 @@
 ﻿using MakeCents;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Input;
 
 namespace WeaponsCSV
 {
@@ -19,7 +22,7 @@ namespace WeaponsCSV
    public partial class MainWindow : Window
    {
       public MainViewModel MVM { get { return this.DataContext as MainViewModel; } }
-
+      public ObservableCollection<clsWeaponCSV> db;
       public MainWindow()
       {
          InitializeComponent();
@@ -44,10 +47,7 @@ namespace WeaponsCSV
             "smg", "sniper", "special" };
 
 
-         DataGridTextColumn textColumn = new DataGridTextColumn();
-         textColumn.Header = "First Name";
-         textColumn.Binding = new Binding("FirstName");
-         spreadsheet.Columns.Add(textColumn);
+         
 
          MVM.WeaponNames = new List<string>();
          MVM.WeaponNames.Add("test");
@@ -59,7 +59,62 @@ namespace WeaponsCSV
       {         
          if (badfile()) return;
          //MVM.AllLines = new List<clsWeaponCSV>();
-         
+         PopulateAllList();
+      }
+
+      private void PopulateAllList()
+      {
+         Mouse.OverrideCursor = Cursors.Wait;
+         Dictionary<string, string> kvps = new Dictionary<string, string>();
+         string[] order = new string[] { };
+         string[] lines = File.ReadAllLines(MVM.FileFolderName);
+         db = new ObservableCollection<clsWeaponCSV>();
+         foreach (String line in lines)
+         {
+            if (line.Contains("weapon_name") && line.Contains("cost") && line.Contains("upgrade_name"))
+            {
+               order = line.Split(',');
+               //spreadsheet.Items.Clear();
+               
+               foreach(string o in order)
+               {
+                  DataGridTextColumn textColumn = new DataGridTextColumn();
+                  textColumn.Header = o;
+                  if (o == "class")
+                  {
+                     textColumn.Binding = new Binding("classs");
+                  }
+                  else
+                  {
+                     textColumn.Binding = new Binding(o);
+                  }
+                  //Console.WriteLine(o);
+                  spreadsheet.Columns.Add(textColumn);
+               }
+               continue;
+            }
+            string[] csvline = line.Split(',');
+            kvps = new Dictionary<string, string>();
+            List<string> row = new List<string>();
+            for (int i = 0; i < csvline.Count(); i++)
+            {               
+               kvps[order[i]] = csvline[i];
+               row.Add(csvline[i]);
+            }
+            
+            clsWeaponCSV tb = new clsWeaponCSV();
+            tb.Update(kvps);
+            
+            MVM.AllLines.Add(tb);
+            
+            //spreadsheet.Items.Add(tb);
+            db.Add(tb);
+            //Console.WriteLine(line);
+         }
+         MVM.mspreadsheet = db;
+         MVM.WeaponNames = clsWeaponCSV.UpdateWeaponNames(MVM.AllLines);
+         MVM.NewLine = false;
+         Mouse.OverrideCursor = Cursors.Arrow;
       }
 
       private bool SetAdd()
@@ -95,13 +150,19 @@ namespace WeaponsCSV
 
       private void OnlyNumeric(object sender, TextChangedEventArgs e)
       {
-         MVM.limit = Regex.Replace(MVM.limit, @"[^\d]", "");
+         //MVM.limit = Regex.Replace(MVM.limit, @"[^\d]", "");
+         UpdateDB(sender, e);
       }
 
       private void comboBox_TextChanged(object sender, TextChangedEventArgs e)
       {
          if(SetAdd()) return;
+         UpdateFormVars();
+      }
 
+      private void UpdateFormVars()
+      {
+         MVM.clearing = true;
          //update to this objects info
          var cv = MVM.AllLines.Where(p => p.weapon_name == MVM.weapon_name);
          foreach (clsWeaponCSV p in cv)
@@ -126,14 +187,20 @@ namespace WeaponsCSV
             MVM.is_wonder_weapon = p.is_wonder_weapon;
             MVM.force_attachments = p.force_attachments;
          }
+         MVM.clearing = false;
       }
 
-      
       private void UpdateDB(object sender, TextChangedEventArgs e)
       {
-         
+         UpdateItem();
+         spreadsheet.ItemsSource = null;
+         spreadsheet.ItemsSource = db;
+      }
+
+      private void UpdateItem()
+      {
          if (MVM.clearing) return;
-         foreach(var item in MVM.AllLines.Where(p => p.weapon_name == MVM.weapon_name))
+         foreach (var item in MVM.AllLines.Where(p => p.weapon_name == MVM.weapon_name))
          {
             item.upgrade_name = MVM.upgrade_name;
             item.hint = MVM.hint;
@@ -155,8 +222,35 @@ namespace WeaponsCSV
             item.is_wonder_weapon = MVM.is_wonder_weapon;
             item.force_attachments = MVM.force_attachments;
          }
+
+      }
+
+
+      private void spreadsheet_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
+      {
+         UpdateFormVars();
          
       }
 
+      private void spreadsheet_RowEditEnding(object sender, DataGridRowEditEndingEventArgs e)
+      {
+         UpdateFormVars();
+      }
+
+
+      private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+      {
+         UpdateFormVars();
+      }
+
+      private void TabControl_MouseEnter(object sender, MouseEventArgs e)
+      {
+         
+      }
+
+      private void spreadsheet_MouseLeave(object sender, MouseEventArgs e)
+      {
+         filefoldername.Focus();
+      }
    }
 }

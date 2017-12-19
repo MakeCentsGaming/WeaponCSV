@@ -65,21 +65,10 @@ namespace WeaponsCSV
 
          AllLines.Add(tb);
          //WeaponNames.Add(tb.weapon_name);
-         UpdateWeaponNames();
+         WeaponNames = clsWeaponCSV.UpdateWeaponNames(AllLines);
+         NewLine = false;
+
       }
 
-      private void UpdateWeaponNames()
-      {
-         WeaponNames = new List<string>();
-         List<string> test = new List<string>();
-         foreach(clsWeaponCSV c in AllLines)
-         {
-            //Console.WriteLine(c.weapon_name);
-            test.Add(c.weapon_name);
-            
-         }
-         WeaponNames = test;
-         NewLine = false;
-      }
    }
 }

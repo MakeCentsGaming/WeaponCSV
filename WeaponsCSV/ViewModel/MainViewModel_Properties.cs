@@ -1,6 +1,7 @@
 ﻿using MakeCents;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,6 +50,21 @@ namespace WeaponsCSV
          }
       }
       */
+      public ObservableCollection<clsWeaponCSV> _mspreadsheet;
+
+      /// <summary>
+      /// 
+      /// </summary>
+      public ObservableCollection<clsWeaponCSV> mspreadsheet
+      {
+         get { return _mspreadsheet; }
+         set
+         {
+            _mspreadsheet = value;
+            OnPropertyChanged("mspreadsheet");
+
+         }
+      }
       public string _FileFolderName;
       /// <summary>
       /// 
