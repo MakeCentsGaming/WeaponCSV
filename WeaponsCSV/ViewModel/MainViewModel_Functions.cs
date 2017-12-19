@@ -126,12 +126,13 @@ namespace WeaponsCSV
               MessageBoxButton.OK, MessageBoxImage.Error);
                return;
             }
-            if(!Directory.Exists(Path.GetDirectoryName(FileFolderName)))
+            /* if no root dir was added and just a name was given it will save at application root
+             * if(!Directory.Exists(Path.GetDirectoryName(FileFolderName)))
             {
                MessageBox.Show("Invalid File Name\n\nFile not saved.", "File Name?",
                MessageBoxButton.OK, MessageBoxImage.Error);
                return;
-            }
+            }*/
             if (Path.GetFileName(FileFolderName)=="")
             {
                MessageBox.Show("Invalid File Name\n\nFile not saved.", "File Name?",
@@ -139,16 +140,20 @@ namespace WeaponsCSV
                return;
             }
             File.WriteAllText(FileFolderName, sb.ToString());
+            MessageBox.Show("File saved as:\n\n" + FileFolderName, "File Saved",
+               MessageBoxButton.OK, MessageBoxImage.Information);
          }
          catch(UnauthorizedAccessException ex)
          {
             MessageBox.Show("I couldn't write the file.\n\nMake sure you don't have it open for some reason.", "Read Only?",
                MessageBoxButton.OK, MessageBoxImage.Error);
+            return;
          }
          catch(ArgumentNullException ex)
          {
             MessageBox.Show("You need a path and file name in order to save.\n\nFile not saved.", "File Name?",
                MessageBoxButton.OK, MessageBoxImage.Error);
+            return;
          }
          
       }
