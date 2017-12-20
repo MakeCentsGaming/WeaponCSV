@@ -12,6 +12,67 @@
             <param name="tb">The textbox</param>
             <param name="firstfile">Grab the first file in the array of args</param>
         </member>
+        <member name="T:MakeCents.clsWeaponCSV">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MakeCents.clsWeaponCSV.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MakeCents.clsWeaponCSV.Update(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="weapon_name"></param>
+            <param name="upgrade_name"></param>
+            <param name="hint"></param>
+            <param name="cost"></param>
+            <param name="weaponVO"></param>
+            <param name="weaponVOresp"></param>
+            <param name="ammo_cost"></param>
+            <param name="create_vox"></param>
+            <param name="obsolete_false"></param>
+            <param name="in_box"></param>
+            <param name="upgrade_in_box"></param>
+            <param name="is_limited"></param>
+            <param name="limit"></param>
+            <param name="upgrade_limit"></param>
+            <param name="obsolete2_false"></param>
+            <param name="wallbuy_autospawn"></param>
+            <param name="classs"></param>
+            <param name="is_aat_exempt"></param>
+            <param name="is_wonder_weapon"></param>
+            <param name="force_attachments"></param>
+        </member>
+        <member name="M:MakeCents.clsWeaponCSV.GetLine(MakeCents.clsWeaponCSV)">
+            <summary>
+            
+            </summary>
+            <param name="tb"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MakeCents.clsWeaponCSV.GetHeaders">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MakeCents.clsWeaponCSV.Update(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            
+            </summary>
+            <param name="kvps"></param>
+        </member>
+        <member name="M:MakeCents.clsWeaponCSV.UpdateWeaponNames(System.Collections.ObjectModel.ObservableCollection{MakeCents.clsWeaponCSV})">
+            <summary>
+            
+            </summary>
+            <param name="allLines"></param>
+            <returns></returns>
+        </member>
         <member name="T:WeaponsCSV.MainViewModel">
             <summary>
             
@@ -40,6 +101,11 @@
             
             </summary>
         </member>
+        <member name="P:WeaponsCSV.MainViewModel.Copy">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="P:WeaponsCSV.MainViewModel.Delete">
             <summary>
             
@@ -59,6 +125,47 @@
             <summary>
             
             </summary>
+        </member>
+        <member name="M:WeaponsCSV.MainViewModel.clearall(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:WeaponsCSV.MainViewModel.aDD(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:WeaponsCSV.MainViewModel.cOmment(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:WeaponsCSV.MainViewModel.UpdateNames">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WeaponsCSV.MainViewModel.dElete(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:WeaponsCSV.MainViewModel.sAve(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:WeaponsCSV.MainViewModel.cOpy(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
         </member>
         <member name="P:WeaponsCSV.MainViewModel.Instance">
             <summary>

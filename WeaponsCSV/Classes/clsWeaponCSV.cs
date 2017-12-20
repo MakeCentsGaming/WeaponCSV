@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace MakeCents
 {
+   /// <summary>
+   /// 
+   /// </summary>
    public class clsWeaponCSV
    {
       public string weapon_name { get; set; }
@@ -29,7 +32,9 @@ namespace MakeCents
       public string is_aat_exempt { get; set; }
       public string is_wonder_weapon { get; set; }
       public string force_attachments { get; set; }
-
+      /// <summary>
+      /// 
+      /// </summary>
       public clsWeaponCSV()
       {
          this.weapon_name = "";
@@ -53,6 +58,29 @@ namespace MakeCents
          this.is_wonder_weapon = "";
          this.force_attachments = "";
       }
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="weapon_name"></param>
+      /// <param name="upgrade_name"></param>
+      /// <param name="hint"></param>
+      /// <param name="cost"></param>
+      /// <param name="weaponVO"></param>
+      /// <param name="weaponVOresp"></param>
+      /// <param name="ammo_cost"></param>
+      /// <param name="create_vox"></param>
+      /// <param name="obsolete_false"></param>
+      /// <param name="in_box"></param>
+      /// <param name="upgrade_in_box"></param>
+      /// <param name="is_limited"></param>
+      /// <param name="limit"></param>
+      /// <param name="upgrade_limit"></param>
+      /// <param name="obsolete2_false"></param>
+      /// <param name="wallbuy_autospawn"></param>
+      /// <param name="classs"></param>
+      /// <param name="is_aat_exempt"></param>
+      /// <param name="is_wonder_weapon"></param>
+      /// <param name="force_attachments"></param>
       public void Update(string weapon_name, 
          string upgrade_name,
          string hint,
@@ -95,7 +123,11 @@ namespace MakeCents
          this.is_wonder_weapon = is_wonder_weapon;
          this.force_attachments = force_attachments;
       }
-
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="tb"></param>
+      /// <returns></returns>
       internal static string GetLine(clsWeaponCSV tb)
       {
          StringBuilder sb = new StringBuilder();
@@ -141,13 +173,19 @@ namespace MakeCents
          return sb.ToString();
 
       }
-
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <returns></returns>
       public static string GetHeaders()
       {
          string result = String.Join(",",new string[]{"weapon_name", "upgrade_name", "hint", "cost", "weaponVO", "weaponVOresp", "ammo_cost", "create_vox", "obsolete_false", "in_box", "upgrade_in_box", "is_limited", "limit", "upgrade_limit", "obsolete2_false", "wallbuy_autospawn", "classs", "is_aat_exempt", "is_wonder_weapon", "force_attachments"});
          return result;
       }
-
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="kvps"></param>
       internal void Update(Dictionary<string, string> kvps)
       {
 
@@ -231,8 +269,12 @@ namespace MakeCents
          {
          this.force_attachments = kvps["force_attachments"];
          }
-}
-
+      }
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="allLines"></param>
+      /// <returns></returns>
       public static List<string> UpdateWeaponNames(ObservableCollection<clsWeaponCSV> allLines)
       {
          //WeaponNames = new List<string>();

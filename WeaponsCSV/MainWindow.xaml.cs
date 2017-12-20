@@ -62,7 +62,8 @@ namespace WeaponsCSV
       }
 
       private void filefoldername_TextChanged(object sender, TextChangedEventArgs e)
-      {         
+      {
+         ClearAll();
          if (badfile()) return;
          //MVM.AllLines = new List<clsWeaponCSV>();
          PopulateAllList();
@@ -70,6 +71,9 @@ namespace WeaponsCSV
 
       private void PopulateAllList()
       {
+         
+         if (MVM.duplicating) return;
+         
          Mouse.OverrideCursor = Cursors.Wait;
          Dictionary<string, string> kvps = new Dictionary<string, string>();
          string[] order = new string[] { };
@@ -123,14 +127,44 @@ namespace WeaponsCSV
          Mouse.OverrideCursor = Cursors.Arrow;
       }
 
+      private void ClearAll()
+      {
+         MVM.AllLines = new ObservableCollection<clsWeaponCSV>();
+         MVM.WeaponNames = new List<string>();
+         MVM.clearing = true;
+         MVM.weapon_name = "";
+         MVM.upgrade_name = "";
+         MVM.hint = "";
+         MVM.cost = "";
+         MVM.weaponVO = "";
+         MVM.weaponVOresp = "";
+         MVM.ammo_cost = "";
+         MVM.create_vox = "";
+         MVM.obsolete_false = "";
+         MVM.in_box = "";
+         MVM.upgrade_in_box = "";
+         MVM.is_limited = "";
+         MVM.limit = "";
+         MVM.upgrade_limit = "";
+         MVM.obsolete2_false = "";
+         MVM.wallbuy_autospawn = "";
+         MVM.classs = "";
+         MVM.is_aat_exempt = "";
+         MVM.is_wonder_weapon = "";
+         MVM.force_attachments = "";
+         MVM.clearing = false;
+         MVM.duplicating = false;
+      }
+
       private bool SetAdd()
       {
          if (MVM.weapon_name=="" || MVM.WeaponNames.Contains(MVM.weapon_name))
          {            
             MVM.NewLine = false;
-            if(MVM.weapon_name=="")
+            if (MVM.weapon_name == "")
                MVM.CommentOut = false;
             else
+               if (MVM.duplicating) return false;
                MVM.CommentOut = true;
             return false;
          }
@@ -162,17 +196,25 @@ namespace WeaponsCSV
       private void OnlyNumeric(object sender, TextChangedEventArgs e)
       {
          //MVM.limit = Regex.Replace(MVM.limit, @"[^\d]", "");
+         if (MVM.duplicating) return;
          UpdateDB(sender, e);
       }
 
       private void comboBox_TextChanged(object sender, TextChangedEventArgs e)
       {
-         if(SetAdd()) return;
+
+         if (MVM.duplicating)
+         {
+            upgradename.Text = weaponname.Text + "_upgraded";
+         }
+         if (SetAdd()) return;
+         
          UpdateFormVars();
       }
 
       private void UpdateFormVars()
       {
+         if (MVM.duplicating) return;
          MVM.clearing = true;
          //update to this objects info
          var cv = MVM.AllLines.Where(p => p.weapon_name == MVM.weapon_name);
@@ -205,6 +247,7 @@ namespace WeaponsCSV
 
       private void UpdateDB(object sender, TextChangedEventArgs e)
       {
+         if (MVM.duplicating) return;
          UpdateItem();
          //spreadsheet.ItemsSource = null;
          //spreadsheet.ItemsSource = MVM.mspreadsheet;
@@ -213,6 +256,7 @@ namespace WeaponsCSV
 
       private void UpdateItem()
       {
+         if (MVM.duplicating) return;
          if (MVM.clearing) return;
          foreach (var item in MVM.AllLines.Where(p => p.weapon_name == MVM.weapon_name))
          {

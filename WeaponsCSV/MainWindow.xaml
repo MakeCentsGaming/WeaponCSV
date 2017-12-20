@@ -133,7 +133,7 @@
                         <ColumnDefinition Width="141*"/>
                         <ColumnDefinition Width="163*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBox TabIndex="1"  Text ="{Binding upgrade_name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" x:Name="textBox_Copy1" Height="23" Margin="20.735,66.787,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="UpdateDB" Grid.ColumnSpan="3" ToolTip="Upgraded weapon file name"/>
+                    <TextBox TabIndex="1"  Text ="{Binding upgrade_name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" x:Name="upgradename" Height="23" Margin="20.735,66.787,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="UpdateDB" Grid.ColumnSpan="3" ToolTip="Upgraded weapon file name"/>
                     <TextBox TabIndex="14" Text="{Binding hint, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" x:Name="textBox_Copy2" Height="23" Margin="20.735,207.863,10,0" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="UpdateDB" Grid.ColumnSpan="2"/>
                     <Label x:Name="label" Content="weapon__name" HorizontalAlignment="Left" Margin="20.866,-0.203,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="25.96" Width="86.42" Foreground="#FFE2DDDD"/>
                     <ComboBox TabIndex="0" TextBoxBase.TextChanged="comboBox_TextChanged"  ItemsSource="{Binding WeaponNames, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Text="{Binding weapon_name}" x:Name="weaponname" Margin="20.866,21.681,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="21.96" IsEditable="True" ToolTip="Weapon file name"/>
@@ -176,11 +176,13 @@
                     <DockPanel Grid.ColumnSpan="5" HorizontalAlignment="Left" Height="27.654" LastChildFill="False" VerticalAlignment="Top" Width="475.959" Margin="20.478,334.406,0,0" RenderTransformOrigin="0.5,0.5">
                         <Button TabIndex="21" Command="{Binding ClearAll}" x:Name="button_Copy" Content="Clear" VerticalAlignment="Top" HorizontalAlignment="Left" Width="54" Height="19.96"/>
                         <DockPanel Height="36.654" LastChildFill="False" VerticalAlignment="Top" Width="12"/>
-                        <Button TabIndex="22" IsEnabled="{Binding CommentOut}" Command="{Binding Comment}" x:Name="button_Copy2" Content="Comment Out" VerticalAlignment="Top" HorizontalAlignment="Left" Width="87.239" Height="19.96"/>
+                        <Button TabIndex="22" IsEnabled="{Binding CommentOut}" Command="{Binding Comment}" x:Name="button_Copy2" Content="Comment Out" VerticalAlignment="Top" HorizontalAlignment="Left" Width="94.239" Height="19.96"/>
                         <DockPanel Height="36.654" LastChildFill="False" VerticalAlignment="Top" Width="12"/>
                         <Button TabIndex="23" IsEnabled="{Binding CommentOut}" Command="{Binding Delete}" x:Name="button_Copy3" Content="Delete" VerticalAlignment="Top" HorizontalAlignment="Left" Width="59.239" Height="19.96"/>
                         <DockPanel Height="36.654" LastChildFill="False" VerticalAlignment="Top" Width="12"/>
                         <Button TabIndex="24" IsEnabled="{Binding NewLine}" Command="{Binding Add}" x:Name="button" Content="Add" VerticalAlignment="Top" HorizontalAlignment="Left" Width="69" Height="19.96"/>
+                        <DockPanel Height="36.654" LastChildFill="False" VerticalAlignment="Top" Width="12" Margin="0,0,0,-9"/>
+                        <Button TabIndex="22" IsEnabled="{Binding CommentOut}" Command="{Binding Copy}" x:Name="button_Copy4" Content="Copy" VerticalAlignment="Top" HorizontalAlignment="Left" Width="68.239" Height="19.96"/>
                         <DockPanel Height="36.654" LastChildFill="False" VerticalAlignment="Top" Width="12"/>
                         <Button TabIndex="25" Command="{Binding Save}" x:Name="button_Copy1" Content="Save" VerticalAlignment="Top" HorizontalAlignment="Left" Width="54" Height="19.96"/>
                     </DockPanel>

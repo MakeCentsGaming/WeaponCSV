@@ -14,7 +14,12 @@ namespace WeaponsCSV
    /// </summary>
    public partial class MainViewModel
    {
+      public bool duplicating;
       public bool clearing;
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="obj"></param>
       private void clearall(object obj=null)
       {
          clearing = true;
@@ -39,7 +44,13 @@ namespace WeaponsCSV
          is_wonder_weapon = "";
          force_attachments = "";
          clearing = false;
+         duplicating = false;
+        
       }
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="obj"></param>
       private void aDD(object obj)
       {
          //add the current vars to an object list
@@ -71,8 +82,12 @@ namespace WeaponsCSV
          WeaponNames = clsWeaponCSV.UpdateWeaponNames(AllLines);
          NewLine = false;
          CommentOut = true;
+         duplicating = false;
       }
-
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="obj"></param>
       public void cOmment(object obj)
       {
          foreach(var item in AllLines.Where(p => p.weapon_name == weapon_name))
@@ -85,14 +100,19 @@ namespace WeaponsCSV
          UpdateNames();
          
       }
-
+      /// <summary>
+      /// 
+      /// </summary>
       private void UpdateNames()
       {
          clearall();
          WeaponNames = clsWeaponCSV.UpdateWeaponNames(AllLines);
          NewLine = false;
       }
-
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="obj"></param>
       public void dElete(object obj)
       {
          int c = 0;
@@ -109,7 +129,10 @@ namespace WeaponsCSV
          AllLines.Remove(item);
          UpdateNames();
       }
-
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="obj"></param>
       public void sAve(object obj)
       {
          StringBuilder sb = new StringBuilder();
@@ -156,6 +179,15 @@ namespace WeaponsCSV
             return;
          }
          
+      }
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="obj"></param>
+      private void cOpy(object obj)
+      {
+         CommentOut = false;
+         duplicating = true;
       }
 
    }
