@@ -48,3 +48,4 @@ C:\Users\MakeCents\Source\Repos\WeaponCSV\WeaponsCSV\obj\Debug\WeaponsCSV.g.reso
 C:\Users\MakeCents\Source\Repos\WeaponCSV\WeaponsCSV\obj\Debug\WeaponsCSV.Properties.Resources.resources
 C:\Users\MakeCents\Source\Repos\WeaponCSV\WeaponsCSV\obj\Debug\WeaponsCSV.csproj.GenerateResource.Cache
 C:\Users\MakeCents\Source\Repos\WeaponCSV\WeaponsCSV\bin\Debug\WeaponsCSV.XML
+C:\Users\davidg\Source\Repos\WeaponCSV\WeaponsCSV\bin\Debug\WeaponsCSV.XML

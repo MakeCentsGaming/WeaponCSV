@@ -37,8 +37,14 @@ namespace WeaponsCSV
 
       }
    }
+   /// <summary>
+   /// 
+   /// </summary>
    public class clsBaseViewModel : INotifyPropertyChanged
    {
+      /// <summary>
+      /// 
+      /// </summary>
       public event PropertyChangedEventHandler PropertyChanged;
       /*******************************************************************************
       Function    : OnPropertyChanged()
@@ -49,6 +55,10 @@ namespace WeaponsCSV
       History:
       2014/10/21 TPR Created
       *******************************************************************************/
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="propertyName"></param>
       protected void OnPropertyChanged(string propertyName)
       {
          if (PropertyChanged != null)
@@ -62,10 +72,16 @@ namespace WeaponsCSV
    History:
    2014/10/17 TPR Created
    *******************************************************************************/
+   /// <summary>
+   /// 
+   /// </summary>
    [Serializable]
    public class ItemBase : INotifyPropertyChanged
    {
-      [field: NonSerialized]
+      /// <summary>
+      /// 
+      /// </summary>
+      [field: NonSerialized]      
       public event PropertyChangedEventHandler PropertyChanged;
       /*******************************************************************************
       Function    : OnPropertyChanged()
@@ -76,6 +92,10 @@ namespace WeaponsCSV
       History:
       2014/10/17 TPR Created
       *******************************************************************************/
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="propertyName"></param>
       protected void OnPropertyChanged(string propertyName)
       {
          if (PropertyChanged != null)

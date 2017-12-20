@@ -12,25 +12,85 @@ namespace MakeCents
    /// </summary>
    public class clsWeaponCSV
    {
+      /// <summary>
+      /// 
+      /// </summary>
       public string weapon_name { get; set; }
+      /// <summary>
+      /// 
+      /// </summary>
       public string upgrade_name { get; set; }
+      /// <summary>
+      /// 
+      /// </summary>
       public string hint { get; set; }
+      /// <summary>
+      /// 
+      /// </summary>
       public string cost { get; set; }
+      /// <summary>
+      /// 
+      /// </summary>
       public string weaponVO { get; set; }
+      /// <summary>
+      /// 
+      /// </summary>
       public string weaponVOresp { get; set; }
+      /// <summary>
+      /// 
+      /// </summary>
       public string ammo_cost { get; set; }
+      /// <summary>
+      /// 
+      /// </summary>
       public string create_vox { get; set; }
+      /// <summary>
+      /// 
+      /// </summary>
       public string obsolete_false { get; set; }
+      /// <summary>
+      /// 
+      /// </summary>
       public string in_box { get; set; }
+      /// <summary>
+      /// 
+      /// </summary>
       public string upgrade_in_box { get; set; }
+      /// <summary>
+      /// 
+      /// </summary>
       public string is_limited { get; set; }
+      /// <summary>
+      /// 
+      /// </summary>
       public string limit { get; set; }
+      /// <summary>
+      /// 
+      /// </summary>
       public string upgrade_limit { get; set; }
+      /// <summary>
+      /// 
+      /// </summary>
       public string obsolete2_false { get; set; }
+      /// <summary>
+      /// 
+      /// </summary>
       public string wallbuy_autospawn { get; set; }
+      /// <summary>
+      /// 
+      /// </summary>
       public string classs { get; set; }
+      /// <summary>
+      /// 
+      /// </summary>
       public string is_aat_exempt { get; set; }
+      /// <summary>
+      /// 
+      /// </summary>
       public string is_wonder_weapon { get; set; }
+      /// <summary>
+      /// 
+      /// </summary>
       public string force_attachments { get; set; }
       /// <summary>
       /// 

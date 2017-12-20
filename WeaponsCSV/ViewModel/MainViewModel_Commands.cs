@@ -47,19 +47,7 @@ namespace WeaponsCSV
          get { return comment = new DelegateCommand(cOmment); }
       }
 
-
-
-      private ICommand save;
-      /// <summary>
-      /// 
-      /// </summary>
-      public ICommand Save
-      {
-         get { return save = new DelegateCommand(sAve); }
-      }
-
       
-
       private ICommand add;
       /// <summary>
       /// 

@@ -33,25 +33,7 @@ namespace WeaponsCSV
       /// </summary>
       public Window MyParentWindow { get; set; }
 
-
-
-      /* Example property
-      /// <summary>
-      /// 
-      /// </summary>
-      public string WelcomeMessage
-      {
-         get { return _WelcomeMessage; }
-         set
-         {
-            _WelcomeMessage = value;
-            OnPropertyChanged("WelcomeMessage");
-            
-         }
-      }
-      */
-      
-      public string _FileFolderName;
+      private string _FileFolderName;
       /// <summary>
       /// 
       /// </summary>
@@ -65,8 +47,7 @@ namespace WeaponsCSV
 
          }
       }
-
-      public List<string> _WeaponNames;
+      private List<string> _WeaponNames;
       /// <summary>
       /// 
       /// </summary>
@@ -80,8 +61,7 @@ namespace WeaponsCSV
 
          }
       }
-
-      public string[] _Cost;
+      private string[] _Cost;
       /// <summary>
       /// 
       /// </summary>
@@ -95,8 +75,7 @@ namespace WeaponsCSV
 
          }
       }
-
-      public string[] _TrueFalse;
+      private string[] _TrueFalse;
       /// <summary>
       /// 
       /// </summary>
@@ -110,8 +89,7 @@ namespace WeaponsCSV
 
          }
       }
-
-      public string[] _WClass;
+      private string[] _WClass;
       /// <summary>
       /// 
       /// </summary>
@@ -125,8 +103,7 @@ namespace WeaponsCSV
 
          }
       }
-
-      public string[] _WVO;
+      private string[] _WVO;
       /// <summary>
       /// 
       /// </summary>
@@ -140,7 +117,7 @@ namespace WeaponsCSV
 
          }
       }
-      public string _About;
+      private string _About;
       /// <summary>
       /// 
       /// </summary>
@@ -155,7 +132,22 @@ namespace WeaponsCSV
          }
       }
 
-      public string _weapon_name;
+      private string _Preview;
+      /// <summary>
+      /// 
+      /// </summary>
+      public string Preview
+      {
+         get { return _Preview; }
+         set
+         {
+            _Preview = value;
+            OnPropertyChanged("Preview");
+
+         }
+      }
+     
+      private string _weapon_name;
       /// <summary>
       /// 
       /// </summary>
@@ -169,8 +161,7 @@ namespace WeaponsCSV
 
          }
       }
-
-      public string _upgrade_name;
+      private string _upgrade_name;
       /// <summary>
       /// 
       /// </summary>
@@ -184,7 +175,7 @@ namespace WeaponsCSV
 
          }
       }
-      public string _limit;
+      private string _limit;
       /// <summary>
       /// 
       /// </summary>
@@ -198,8 +189,7 @@ namespace WeaponsCSV
 
          }
       }
-
-      public string _hint;
+      private string _hint;
       /// <summary>
       /// 
       /// </summary>
@@ -212,8 +202,7 @@ namespace WeaponsCSV
             OnPropertyChanged("hint");
          }
       }
-
-      public string _cost;
+      private string _cost;
       /// <summary>
       /// 
       /// </summary>
@@ -226,8 +215,7 @@ namespace WeaponsCSV
             OnPropertyChanged("cost");
          }
       }
-
-      public string _weaponVO;
+      private string _weaponVO;
       /// <summary>
       /// 
       /// </summary>
@@ -241,8 +229,7 @@ namespace WeaponsCSV
 
          }
       }
-
-      public string _weaponVOresp;
+      private string _weaponVOresp;
       /// <summary>
       /// 
       /// </summary>
@@ -257,8 +244,7 @@ namespace WeaponsCSV
          }
       }
 
-
-      public string _ammo_cost;
+      private string _ammo_cost;
       /// <summary>
       /// 
       /// </summary>
@@ -272,8 +258,7 @@ namespace WeaponsCSV
 
          }
       }
-
-      public string _create_vox;
+      private string _create_vox;
       /// <summary>
       /// 
       /// </summary>
@@ -287,8 +272,7 @@ namespace WeaponsCSV
 
          }
       }
-
-      public string _obsolete_false;
+      private string _obsolete_false;
       /// <summary>
       /// 
       /// </summary>
@@ -302,8 +286,7 @@ namespace WeaponsCSV
 
          }
       }
-
-      public string _in_box;
+      private string _in_box;
       /// <summary>
       /// 
       /// </summary>
@@ -317,8 +300,7 @@ namespace WeaponsCSV
 
          }
       }
-
-      public string _upgrade_in_box;
+      private string _upgrade_in_box;
       /// <summary>
       /// 
       /// </summary>
@@ -332,8 +314,7 @@ namespace WeaponsCSV
 
          }
       }
-
-      public string _is_limited;
+      private string _is_limited;
       /// <summary>
       /// 
       /// </summary>
@@ -347,8 +328,7 @@ namespace WeaponsCSV
 
          }
       }
-
-      public string _upgrade_limit;
+      private string _upgrade_limit;
       /// <summary>
       /// 
       /// </summary>
@@ -362,8 +342,7 @@ namespace WeaponsCSV
 
          }
       }
-
-      public string _obsolete2_false;
+      private string _obsolete2_false;
       /// <summary>
       /// 
       /// </summary>
@@ -377,8 +356,7 @@ namespace WeaponsCSV
 
          }
       }
-
-      public string _wallbuy_autospawn;
+      private string _wallbuy_autospawn;
       /// <summary>
       /// 
       /// </summary>
@@ -392,8 +370,7 @@ namespace WeaponsCSV
 
          }
       }
-
-      public string _classs;
+      private string _classs;
       /// <summary>
       /// 
       /// </summary>
@@ -407,8 +384,7 @@ namespace WeaponsCSV
 
          }
       }
-
-      public string _is_aat_exempt;
+      private string _is_aat_exempt;
       /// <summary>
       /// 
       /// </summary>
@@ -422,8 +398,7 @@ namespace WeaponsCSV
 
          }
       }
-
-      public string _is_wonder_weapon;
+      private string _is_wonder_weapon;
       /// <summary>
       /// 
       /// </summary>
@@ -437,8 +412,7 @@ namespace WeaponsCSV
 
          }
       }
-
-      public string _force_attachments;
+      private string _force_attachments;
       /// <summary>
       /// 
       /// </summary>
@@ -452,8 +426,7 @@ namespace WeaponsCSV
 
          }
       }
-
-      public bool _NewLine;
+      private bool _NewLine;
       /// <summary>
       /// 
       /// </summary>
@@ -467,8 +440,7 @@ namespace WeaponsCSV
 
          }
       }
-
-      public bool _CommentOut;
+      private bool _CommentOut;
       /// <summary>
       /// 
       /// </summary>
@@ -483,8 +455,7 @@ namespace WeaponsCSV
          }
       }
 
-
-      public ObservableCollection<clsWeaponCSV> _AllLines;
+      private ObservableCollection<clsWeaponCSV> _AllLines;
       /// <summary>
       /// 
       /// </summary>

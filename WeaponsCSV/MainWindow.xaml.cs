@@ -23,8 +23,17 @@ namespace WeaponsCSV
    /// </summary>
    public partial class MainWindow : Window
    {
+      /// <summary>
+      /// 
+      /// </summary>
       public MainViewModel MVM { get { return this.DataContext as MainViewModel; } }
+      /// <summary>
+      /// 
+      /// </summary>
       public ObservableCollection<clsWeaponCSV> db;
+      /// <summary>
+      /// 
+      /// </summary>
       public MainWindow()
       {
          InitializeComponent();
@@ -34,7 +43,7 @@ namespace WeaponsCSV
 
 
       }
-
+      
       private void InitControls()
       {
          MVM.AllLines = new ObservableCollection<clsWeaponCSV>();
@@ -51,24 +60,20 @@ namespace WeaponsCSV
             "smg", "sniper", "tesla", "thundergun", "wpck_bowie", "wpck_ray" };
          MVM.WClass = new string[] { "","grenade", "lmg", "pistol", "rifle", "shotgun",
             "smg", "sniper", "special" };
-
-
          
-
          MVM.WeaponNames = new List<string>();
-         MVM.WeaponNames.Add("test");
-         MVM.WeaponNames.Add("test2");
-         MVM.WeaponNames.Add("test3");
       }
 
       private void filefoldername_TextChanged(object sender, TextChangedEventArgs e)
       {
-         ClearAll();
+         
          if (badfile()) return;
+         ClearAll();
          //MVM.AllLines = new List<clsWeaponCSV>();
          PopulateAllList();
+         UpdatePreview();
       }
-
+      
       private void PopulateAllList()
       {
          
@@ -107,7 +112,7 @@ namespace WeaponsCSV
             kvps = new Dictionary<string, string>();
             List<string> row = new List<string>();
             for (int i = 0; i < csvline.Count(); i++)
-            {               
+            {
                kvps[order[i]] = csvline[i];
                row.Add(csvline[i]);
             }
@@ -241,8 +246,18 @@ namespace WeaponsCSV
             MVM.force_attachments = p.force_attachments;
          }
          MVM.clearing = false;
-         
-         
+         UpdatePreview();
+      }
+
+      private void UpdatePreview()
+      {
+         StringBuilder sb = new StringBuilder();
+         sb.AppendLine(clsWeaponCSV.GetHeaders());
+         foreach (clsWeaponCSV tb in MVM.AllLines)
+         {
+            sb.AppendLine(clsWeaponCSV.GetLine(tb));
+         }
+         MVM.Preview = sb.ToString();
       }
 
       private void UpdateDB(object sender, TextChangedEventArgs e)
@@ -251,7 +266,9 @@ namespace WeaponsCSV
          UpdateItem();
          //spreadsheet.ItemsSource = null;
          //spreadsheet.ItemsSource = MVM.mspreadsheet;
+         
          spreadsheet.Items.Refresh();
+         
       }
 
       private void UpdateItem()
@@ -280,7 +297,7 @@ namespace WeaponsCSV
             item.is_wonder_weapon = MVM.is_wonder_weapon;
             item.force_attachments = MVM.force_attachments;
          }
-
+         UpdatePreview();
       }
 
 
@@ -312,5 +329,51 @@ namespace WeaponsCSV
          MVM.WeaponNames = clsWeaponCSV.UpdateWeaponNames(MVM.AllLines);
       }
 
+      private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+      {
+         StringBuilder sb = new StringBuilder();
+         sb.AppendLine(clsWeaponCSV.GetHeaders());
+         foreach (clsWeaponCSV tb in MVM.AllLines)
+         {
+            sb.AppendLine(clsWeaponCSV.GetLine(tb));
+         }
+         try
+         {
+            if (Directory.Exists(MVM.FileFolderName))
+            {
+               MessageBox.Show("Invalid File Name\n\nFile not saved.", "File Name?",
+              MessageBoxButton.OK, MessageBoxImage.Error);
+               return;
+            }
+            /* if no root dir was added and just a name was given it will save at application root
+             * if(!Directory.Exists(Path.GetDirectoryName(FileFolderName)))
+            {
+               MessageBox.Show("Invalid File Name\n\nFile not saved.", "File Name?",
+               MessageBoxButton.OK, MessageBoxImage.Error);
+               return;
+            }*/
+            if (Path.GetFileName(MVM.FileFolderName) == "")
+            {
+               MessageBox.Show("Invalid File Name\n\nFile not saved.", "File Name?",
+               MessageBoxButton.OK, MessageBoxImage.Error);
+               return;
+            }
+            File.WriteAllText(MVM.FileFolderName, sb.ToString());
+            MessageBox.Show("File saved as:\n\n" + MVM.FileFolderName, "File Saved",
+               MessageBoxButton.OK, MessageBoxImage.Information);
+         }
+         catch (UnauthorizedAccessException)
+         {
+            MessageBox.Show("I couldn't write the file.\n\nMake sure you don't have it open for some reason.", "Read Only?",
+               MessageBoxButton.OK, MessageBoxImage.Error);
+            return;
+         }
+         catch (ArgumentNullException)
+         {
+            MessageBox.Show("You need a path and file name in order to save.\n\nFile not saved.", "File Name?",
+               MessageBoxButton.OK, MessageBoxImage.Error);
+            return;
+         }
+      }
    }
 }

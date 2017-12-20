@@ -17,6 +17,106 @@
             
             </summary>
         </member>
+        <member name="P:MakeCents.clsWeaponCSV.weapon_name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MakeCents.clsWeaponCSV.upgrade_name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MakeCents.clsWeaponCSV.hint">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MakeCents.clsWeaponCSV.cost">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MakeCents.clsWeaponCSV.weaponVO">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MakeCents.clsWeaponCSV.weaponVOresp">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MakeCents.clsWeaponCSV.ammo_cost">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MakeCents.clsWeaponCSV.create_vox">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MakeCents.clsWeaponCSV.obsolete_false">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MakeCents.clsWeaponCSV.in_box">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MakeCents.clsWeaponCSV.upgrade_in_box">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MakeCents.clsWeaponCSV.is_limited">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MakeCents.clsWeaponCSV.limit">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MakeCents.clsWeaponCSV.upgrade_limit">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MakeCents.clsWeaponCSV.obsolete2_false">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MakeCents.clsWeaponCSV.wallbuy_autospawn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MakeCents.clsWeaponCSV.classs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MakeCents.clsWeaponCSV.is_aat_exempt">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MakeCents.clsWeaponCSV.is_wonder_weapon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MakeCents.clsWeaponCSV.force_attachments">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="M:MakeCents.clsWeaponCSV.#ctor">
             <summary>
             
@@ -116,12 +216,17 @@
             
             </summary>
         </member>
-        <member name="P:WeaponsCSV.MainViewModel.Save">
+        <member name="P:WeaponsCSV.MainViewModel.Add">
             <summary>
             
             </summary>
         </member>
-        <member name="P:WeaponsCSV.MainViewModel.Add">
+        <member name="F:WeaponsCSV.MainViewModel.duplicating">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:WeaponsCSV.MainViewModel.clearing">
             <summary>
             
             </summary>
@@ -150,12 +255,6 @@
             </summary>
         </member>
         <member name="M:WeaponsCSV.MainViewModel.dElete(System.Object)">
-            <summary>
-            
-            </summary>
-            <param name="obj"></param>
-        </member>
-        <member name="M:WeaponsCSV.MainViewModel.sAve(System.Object)">
             <summary>
             
             </summary>
@@ -208,6 +307,11 @@
             </summary>
         </member>
         <member name="P:WeaponsCSV.MainViewModel.About">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.Preview">
             <summary>
             
             </summary>
@@ -327,6 +431,38 @@
             
             </summary>
         </member>
+        <member name="T:WeaponsCSV.clsBaseViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:WeaponsCSV.clsBaseViewModel.PropertyChanged">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WeaponsCSV.clsBaseViewModel.OnPropertyChanged(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="propertyName"></param>
+        </member>
+        <member name="T:WeaponsCSV.ItemBase">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:WeaponsCSV.ItemBase.PropertyChanged">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WeaponsCSV.ItemBase.OnPropertyChanged(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="propertyName"></param>
+        </member>
         <member name="T:WeaponsCSV.App">
             <summary>
             Interaction logic for App.xaml
@@ -351,6 +487,21 @@
             </summary>
             <summary>
             MainWindow
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainWindow.MVM">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:WeaponsCSV.MainWindow.db">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WeaponsCSV.MainWindow.#ctor">
+            <summary>
+            
             </summary>
         </member>
         <member name="M:WeaponsCSV.MainWindow.InitializeComponent">
