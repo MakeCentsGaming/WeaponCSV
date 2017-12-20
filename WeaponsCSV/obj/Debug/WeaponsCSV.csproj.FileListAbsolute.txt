@@ -33,3 +33,18 @@ C:\Users\davidg\Source\Repos\WeaponCSV\WeaponsCSV\obj\Debug\WeaponsCSV.exe
 C:\Users\davidg\Source\Repos\WeaponCSV\WeaponsCSV\obj\Debug\WeaponsCSV.pdb
 C:\Users\davidg\Source\Repos\WeaponCSV\WeaponsCSV\obj\Debug\Simple Styles.baml
 C:\Users\davidg\Source\Repos\WeaponCSV\WeaponsCSV\obj\Debug\App.baml
+C:\Users\MakeCents\Source\Repos\WeaponCSV\WeaponsCSV\bin\Debug\WeaponsCSV.exe
+C:\Users\MakeCents\Source\Repos\WeaponCSV\WeaponsCSV\bin\Debug\WeaponsCSV.pdb
+C:\Users\MakeCents\Source\Repos\WeaponCSV\WeaponsCSV\obj\Debug\WeaponsCSV.csprojResolveAssemblyReference.cache
+C:\Users\MakeCents\Source\Repos\WeaponCSV\WeaponsCSV\obj\Debug\Simple Styles.baml
+C:\Users\MakeCents\Source\Repos\WeaponCSV\WeaponsCSV\obj\Debug\MainWindow.g.cs
+C:\Users\MakeCents\Source\Repos\WeaponCSV\WeaponsCSV\obj\Debug\App.g.cs
+C:\Users\MakeCents\Source\Repos\WeaponCSV\WeaponsCSV\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\MakeCents\Source\Repos\WeaponCSV\WeaponsCSV\obj\Debug\WeaponsCSV_MarkupCompile.cache
+C:\Users\MakeCents\Source\Repos\WeaponCSV\WeaponsCSV\obj\Debug\WeaponsCSV_MarkupCompile.lref
+C:\Users\MakeCents\Source\Repos\WeaponCSV\WeaponsCSV\obj\Debug\App.baml
+C:\Users\MakeCents\Source\Repos\WeaponCSV\WeaponsCSV\obj\Debug\MainWindow.baml
+C:\Users\MakeCents\Source\Repos\WeaponCSV\WeaponsCSV\obj\Debug\WeaponsCSV.g.resources
+C:\Users\MakeCents\Source\Repos\WeaponCSV\WeaponsCSV\obj\Debug\WeaponsCSV.Properties.Resources.resources
+C:\Users\MakeCents\Source\Repos\WeaponCSV\WeaponsCSV\obj\Debug\WeaponsCSV.csproj.GenerateResource.Cache
+C:\Users\MakeCents\Source\Repos\WeaponCSV\WeaponsCSV\bin\Debug\WeaponsCSV.XML

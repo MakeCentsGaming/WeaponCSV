@@ -1,0 +1,301 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WeaponsCSV</name>
+    </assembly>
+    <members>
+        <member name="M:MakeCents.clsDragNDrop.TextBoxDragNDrop(System.Windows.Controls.TextBox,System.Boolean)">
+            <summary>
+            <para></para>
+            When you want a textbox to use drag and drop
+            </summary>
+            <param name="tb">The textbox</param>
+            <param name="firstfile">Grab the first file in the array of args</param>
+        </member>
+        <member name="T:WeaponsCSV.MainViewModel">
+            <summary>
+            
+            </summary>
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WeaponsCSV.MainViewModel.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WeaponsCSV.MainViewModel.Init">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WeaponsCSV.MainViewModel.DeInit">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.ClearAll">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.Delete">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.Comment">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.Save">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.Add">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.Instance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.MyParentWindow">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.FileFolderName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.WeaponNames">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.Cost">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.TrueFalse">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.WClass">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.WVO">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.About">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.weapon_name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.upgrade_name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.limit">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.hint">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.cost">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.weaponVO">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.weaponVOresp">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.ammo_cost">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.create_vox">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.obsolete_false">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.in_box">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.upgrade_in_box">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.is_limited">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.upgrade_limit">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.obsolete2_false">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.wallbuy_autospawn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.classs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.is_aat_exempt">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.is_wonder_weapon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.force_attachments">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.NewLine">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.CommentOut">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.MainViewModel.AllLines">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WeaponsCSV.App">
+            <summary>
+            Interaction logic for App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:WeaponsCSV.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:WeaponsCSV.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:WeaponsCSV.MainWindow">
+            <summary>
+            Interaction logic for MainWindow.xaml
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:WeaponsCSV.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:WeaponsCSV.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:WeaponsCSV.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>
