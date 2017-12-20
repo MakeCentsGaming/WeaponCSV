@@ -239,7 +239,7 @@ namespace MakeCents
       /// <returns></returns>
       public static string GetHeaders()
       {
-         string result = String.Join(",",new string[]{"weapon_name", "upgrade_name", "hint", "cost", "weaponVO", "weaponVOresp", "ammo_cost", "create_vox", "obsolete_false", "in_box", "upgrade_in_box", "is_limited", "limit", "upgrade_limit", "obsolete2_false", "wallbuy_autospawn", "classs", "is_aat_exempt", "is_wonder_weapon", "force_attachments"});
+         string result = String.Join(",",new string[]{"weapon_name", "upgrade_name", "hint", "cost", "weaponVO", "weaponVOresp", "ammo_cost", "create_vox", "obsolete_false", "in_box", "upgrade_in_box", "is_limited", "limit", "upgrade_limit", "obsolete2_false", "wallbuy_autospawn", "class", "is_aat_exempt", "is_wonder_weapon", "force_attachments"});
          return result;
       }
       /// <summary>

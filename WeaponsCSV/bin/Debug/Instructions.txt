@@ -1,6 +1,6 @@
 MakeCents
-12-19-17
-WeaponsCSV v0.2
+12-20-17
+WeaponsCSV v0.3.0.1
 level_common_weapons.csv editor
 
 Open tool
@@ -10,5 +10,6 @@ Edit it as you like
 	Cannot delete or add items in spreadsheet (for safety reasons)
 You can copy one and then Add it
 You can simply type a name into weapon name and add it
+Or copy it then edit name and add it
 You can delete
 You can comment out

@@ -1,4 +1,4 @@
-weapon_name,upgrade_name,hint,cost,weaponVO,weaponVOresp,ammo_cost,create_vox,obsolete_false,in_box,upgrade_in_box,is_limited,limit,upgrade_limit,obsolete2_false,wallbuy_autospawn,classs,is_aat_exempt,is_wonder_weapon,force_attachments
+weapon_name,upgrade_name,hint,cost,weaponVO,weaponVOresp,ammo_cost,create_vox,obsolete_false,in_box,upgrade_in_box,is_limited,limit,upgrade_limit,obsolete2_false,wallbuy_autospawn,class,is_aat_exempt,is_wonder_weapon,force_attachments
 pistol_standard,pistol_standard_upgraded,,50,pistol,,0,,,FALSE,FALSE,TRUE,0,,FALSE,FALSE,pistol,TRUE,,
 bouncingbetty,,,1000,betty,,,,,FALSE,FALSE,FALSE,,,FALSE,TRUE,grenade,,,
 cymbal_monkey,,,2000,monkey,,,,,TRUE,FALSE,FALSE,,,FALSE,TRUE,grenade,,,
