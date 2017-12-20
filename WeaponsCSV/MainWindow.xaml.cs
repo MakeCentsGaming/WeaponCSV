@@ -7,13 +7,9 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 
 namespace WeaponsCSV
@@ -66,26 +62,26 @@ namespace WeaponsCSV
 
       private void filefoldername_TextChanged(object sender, TextChangedEventArgs e)
       {
-         
          if (badfile()) return;
          ClearAll();
          //MVM.AllLines = new List<clsWeaponCSV>();
+         Mouse.OverrideCursor = Cursors.Wait;
+         
          PopulateAllList();
          UpdatePreview();
       }
       
       private void PopulateAllList()
-      {
-         
+      {         
          if (MVM.duplicating) return;
          
-         Mouse.OverrideCursor = Cursors.Wait;
          Dictionary<string, string> kvps = new Dictionary<string, string>();
          string[] order = new string[] { };
          string[] lines = File.ReadAllLines(MVM.FileFolderName);
          db = new ObservableCollection<clsWeaponCSV>();
          foreach (String line in lines)
          {
+            
             if (line.Contains("weapon_name") && line.Contains("cost") && line.Contains("upgrade_name"))
             {
                order = line.Split(',');
@@ -120,13 +116,15 @@ namespace WeaponsCSV
             clsWeaponCSV tb = new clsWeaponCSV();
             tb.Update(kvps);
             
-            MVM.AllLines.Add(tb);
+            db.Add(tb);
             
             //spreadsheet.Items.Add(tb);
-            db.Add(tb);
+            //db.Add(tb);
             //Console.WriteLine(line);
          }
          //MVM.mspreadsheet = MVM.AllLines;
+         tabs.SelectedIndex = 0;
+         MVM.AllLines = db;
          MVM.WeaponNames = clsWeaponCSV.UpdateWeaponNames(MVM.AllLines);
          MVM.NewLine = false;
          Mouse.OverrideCursor = Cursors.Arrow;
@@ -210,7 +208,7 @@ namespace WeaponsCSV
 
          if (MVM.duplicating)
          {
-            upgradename.Text = weaponname.Text + "_upgraded";
+            MVM.upgrade_name = MVM.weapon_name + "_upgraded";
          }
          if (SetAdd()) return;
          

@@ -126,7 +126,7 @@
         <local:MainViewModel />
     </Window.DataContext>
     <Grid Background="#FF535151" Margin="-4.722,-0.323,-4.215,-2.895">
-        <TabControl  Margin="9,49.5,10,10" Grid.ColumnSpan="3" SelectionChanged="TabControl_SelectionChanged" Background="#FF686060" OpacityMask="#FFBF2828">
+        <TabControl x:Name="tabs"  Margin="9,49.5,10,10" Grid.ColumnSpan="3" SelectionChanged="TabControl_SelectionChanged" Background="#FF686060" OpacityMask="#FFBF2828">
             <TabItem Header="Editor"  Style="{DynamicResource TabItemStyle1}"  BorderBrush="#FF918C8C" OpacityMask="#FF918C8C">
                 <TabItem.Background>
                     <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
