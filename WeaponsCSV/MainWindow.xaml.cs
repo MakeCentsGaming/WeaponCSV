@@ -90,7 +90,7 @@ namespace WeaponsCSV
                foreach(string o in order)
                {
                   DataGridTextColumn textColumn = new DataGridTextColumn();
-                  textColumn.Header = o;
+                  textColumn.Header = o.Replace("_"," ");
                   if (o == "class")
                   {
                      textColumn.Binding = new Binding("classs");
