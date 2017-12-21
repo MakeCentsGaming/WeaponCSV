@@ -126,8 +126,8 @@
         <local:MainViewModel />
     </Window.DataContext>
     <Grid Background="#FF535151" Margin="-4.722,-0.323,-4.215,-2.895">
-        <TabControl x:Name="tabs"  Margin="9,49.5,10,10" Grid.ColumnSpan="3" SelectionChanged="TabControl_SelectionChanged" Background="#FF686060" OpacityMask="#FFBF2828">
-            <TabItem Header="Editor"  Style="{DynamicResource TabItemStyle1}"  BorderBrush="#FF918C8C" OpacityMask="#FF918C8C">
+        <TabControl x:Name="tabs"  Margin="9,49.5,10,10" Grid.ColumnSpan="3" SelectionChanged="TabControl_SelectionChanged" Background="#FF686060" OpacityMask="#FFBF2828" BorderBrush="#FF818181">
+            <TabItem Header="Editor"  Style="{DynamicResource TabItemStyle1}"  BorderBrush="#FF918C8C" OpacityMask="#FF918C8C" Margin="-1.875,0,0,-1">
                 <TabItem.Background>
                     <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                         <GradientStop Color="#FFF0F0F0" Offset="0"/>
@@ -200,7 +200,7 @@
                     <Label x:Name="label_Copy20" Content="Preview" HorizontalAlignment="Left" Margin="20.976,362.11,0,-21.372" VerticalAlignment="Top" Height="25.96" Width="107.003" Foreground="#FFE2DDDD" Grid.ColumnSpan="2"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Spreadsheet" Style="{DynamicResource TabItemStyle1}" BorderBrush="#FF918C8C" OpacityMask="#FF918C8C">
+            <TabItem Header="Spreadsheet" Style="{DynamicResource TabItemStyle1}" BorderBrush="#FF918C8C" OpacityMask="#FF918C8C" Margin="0,0,0,-1.021">
                 <TabItem.Background>
                     <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                         <GradientStop Color="#FFF0F0F0" Offset="0"/>
@@ -208,7 +208,7 @@
                     </LinearGradientBrush>
                 </TabItem.Background>
                 <Grid Background="#FFC5BEBE">
-                    <DataGrid CellStyle="{DynamicResource DataGridCellStyle1}" ItemsSource="{Binding AllLines, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalScrollBarVisibility="Auto" x:Name="spreadsheet" Margin="0,-1,0,0" CellEditEnding="spreadsheet_CellEditEnding" RowEditEnding="spreadsheet_RowEditEnding" MouseLeave="spreadsheet_MouseLeave" Background="#FF686060" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}"/>
+                    <DataGrid CellStyle="{DynamicResource DataGridCellStyle1}" ItemsSource="{Binding AllLines, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalScrollBarVisibility="Auto" x:Name="spreadsheet" CellEditEnding="spreadsheet_CellEditEnding" RowEditEnding="spreadsheet_RowEditEnding" MouseLeave="spreadsheet_MouseLeave" Background="#FF686060" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}"/>
                 </Grid>
             </TabItem>
         </TabControl>
