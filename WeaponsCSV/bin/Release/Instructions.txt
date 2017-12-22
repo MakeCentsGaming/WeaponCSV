@@ -1,0 +1,14 @@
+MakeCents
+12-22-17
+WeaponsCSV v1
+level_common_weapons.csv editor
+
+Open tool
+Drag level_common_weapons.csv to it
+Edit it as you like
+	Can edit in spreadsheet and editor
+You can copy one and then Add it
+You can simply type a name into weapon name and add it
+Or copy it then edit name and add it
+You can delete
+You can comment out

@@ -49,3 +49,7 @@ C:\Users\MakeCents\Source\Repos\WeaponCSV\WeaponsCSV\obj\Debug\WeaponsCSV.Proper
 C:\Users\MakeCents\Source\Repos\WeaponCSV\WeaponsCSV\obj\Debug\WeaponsCSV.csproj.GenerateResource.Cache
 C:\Users\MakeCents\Source\Repos\WeaponCSV\WeaponsCSV\bin\Debug\WeaponsCSV.XML
 C:\Users\davidg\Source\Repos\WeaponCSV\WeaponsCSV\bin\Debug\WeaponsCSV.XML
+C:\Users\MakeCents\Source\GitHub\WeaponCSV\WeaponsCSV\bin\Debug\WeaponsCSV.exe.config
+C:\Users\MakeCents\Source\GitHub\WeaponCSV\WeaponsCSV\bin\Debug\WeaponsCSV.XML
+C:\Users\MakeCents\Source\GitHub\WeaponCSV\WeaponsCSV\obj\Debug\WeaponsCSV.exe
+C:\Users\MakeCents\Source\GitHub\WeaponCSV\WeaponsCSV\obj\Debug\WeaponsCSV.pdb

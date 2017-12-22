@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-C:\Users\MakeCents\Source\GitHub\WeaponCSV\WeaponsCSV\obj\Debug\
+C:\Users\MakeCents\Source\GitHub\WeaponCSV\WeaponsCSV\obj\Release\
 WeaponsCSV
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\MakeCents\Source\GitHub\WeaponCSV\WeaponsCSV\App.xaml
 2-1509017259
 
-15-1283724166
+15-393241651
 15-1357988170
 MainWindow.xaml;Simple Styles.xaml;
 
