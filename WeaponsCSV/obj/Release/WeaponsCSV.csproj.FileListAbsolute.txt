@@ -18,3 +18,17 @@ C:\Users\MakeCents\Source\Repos\WeaponCSV\WeaponsCSV\obj\Release\WeaponsCSV.pdb
 C:\Users\MakeCents\Source\GitHub\WeaponCSV\WeaponsCSV\bin\Release\WeaponsCSV.exe.config
 C:\Users\MakeCents\Source\GitHub\WeaponCSV\WeaponsCSV\obj\Release\WeaponsCSV.exe
 C:\Users\MakeCents\Source\GitHub\WeaponCSV\WeaponsCSV\obj\Release\WeaponsCSV.pdb
+C:\Users\MakeCents\Source\GitHub\WeaponCSV\WeaponsCSV\bin\Release\WeaponsCSV.exe
+C:\Users\MakeCents\Source\GitHub\WeaponCSV\WeaponsCSV\bin\Release\WeaponsCSV.pdb
+C:\Users\MakeCents\Source\GitHub\WeaponCSV\WeaponsCSV\obj\Release\WeaponsCSV.csprojResolveAssemblyReference.cache
+C:\Users\MakeCents\Source\GitHub\WeaponCSV\WeaponsCSV\obj\Release\Simple Styles.baml
+C:\Users\MakeCents\Source\GitHub\WeaponCSV\WeaponsCSV\obj\Release\MainWindow.g.cs
+C:\Users\MakeCents\Source\GitHub\WeaponCSV\WeaponsCSV\obj\Release\App.g.cs
+C:\Users\MakeCents\Source\GitHub\WeaponCSV\WeaponsCSV\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\MakeCents\Source\GitHub\WeaponCSV\WeaponsCSV\obj\Release\WeaponsCSV_MarkupCompile.cache
+C:\Users\MakeCents\Source\GitHub\WeaponCSV\WeaponsCSV\obj\Release\WeaponsCSV_MarkupCompile.lref
+C:\Users\MakeCents\Source\GitHub\WeaponCSV\WeaponsCSV\obj\Release\App.baml
+C:\Users\MakeCents\Source\GitHub\WeaponCSV\WeaponsCSV\obj\Release\MainWindow.baml
+C:\Users\MakeCents\Source\GitHub\WeaponCSV\WeaponsCSV\obj\Release\WeaponsCSV.g.resources
+C:\Users\MakeCents\Source\GitHub\WeaponCSV\WeaponsCSV\obj\Release\WeaponsCSV.Properties.Resources.resources
+C:\Users\MakeCents\Source\GitHub\WeaponCSV\WeaponsCSV\obj\Release\WeaponsCSV.csproj.GenerateResource.Cache

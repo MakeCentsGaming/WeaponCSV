@@ -33,11 +33,13 @@ namespace WeaponsCSV
       public MainWindow()
       {
          InitializeComponent();
+         
          InitControls();
          Version v = Assembly.GetExecutingAssembly().GetName().Version;
          MVM.About = string.Format(CultureInfo.InvariantCulture, @"Version {0}.{1}.{2} (r{3})", v.Major, v.Minor, v.Build, v.Revision);
-
-
+         spreadsheet.EnableRowVirtualization = true;
+         spreadsheet.EnableColumnVirtualization = true;
+         
       }
       
       private void InitControls()

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WeaponsCSV"
         xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2" xmlns:Themes1="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" x:Class="WeaponsCSV.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="461.825" Width="478" MinHeight="483.825" MinWidth="525" Icon="WeaponCSV.ico">
+        Title="WeaponCSV" Height="461.825" Width="478" MinHeight="483.825" MinWidth="525" Icon="WeaponCSV.ico">
     <Window.Resources>
         <Style x:Key="DataGridCellStyle1" TargetType="{x:Type DataGridCell}">
             <Setter Property="Background" Value="Gray"/>
