@@ -89,21 +89,21 @@ namespace WeaponsCSV
                order = line.Split(',');
                //spreadsheet.Items.Clear();
                
-               foreach(string o in order)
-               {
-                  DataGridTextColumn textColumn = new DataGridTextColumn();
-                  textColumn.Header = o.Replace("_"," ");
-                  if (o == "class")
-                  {
-                     textColumn.Binding = new Binding("classs");
-                  }
-                  else
-                  {
-                     textColumn.Binding = new Binding(o);
-                  }
-                  //Console.WriteLine(o);
-                  spreadsheet.Columns.Add(textColumn);
-               }
+               //foreach(string o in order)
+               //{
+               //   DataGridTextColumn textColumn = new DataGridTextColumn();
+               //   textColumn.Header = o.Replace("_"," ");
+               //   if (o == "class")
+               //   {
+               //      textColumn.Binding = new Binding("classs");
+               //   }
+               //   else
+               //   {
+               //      textColumn.Binding = new Binding(o);
+               //   }
+               //   Console.WriteLine(o);
+               //   spreadsheet.Columns.Add(textColumn);
+               //}
                continue;
             }
             string[] csvline = line.Split(',');
