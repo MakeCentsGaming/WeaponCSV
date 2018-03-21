@@ -1,15 +1,16 @@
 # WeaponCSV
-A level_common_weapon.csv editor
+WeaponCSV is a CSV editor for Black Ops III's level_common_weapon.csv file.
 
+## Usage
+1. Open WeaponCSV
+2. Drag the level_common_weapon.csv on the Weapn CSV tool
+3. Edit the content in either tab
+4. Press the save button when finished editing
 
-Open WeaponCSV
+## Copying
+1. Select Copy
+2. Select Done when finished renaming
 
-Drag a level_common_weapon.csv to the tool
-Edit in either tab
-Hit save when done editing
-
-To copy, select copy, but also select add when done renaming
-
-
-
-Will not handle adding the same weapon twice well. Will not let you do it, unless you manually do it, but then will treat them the same.
+### Note
+WeaponCSV does not handle adding the same weapon twice well and prevents the user from attempting.
+The user can manually add the same weapon and WeaponCSV treats both weapons as the same.
